@@ -1,6 +1,6 @@
 # simplex-flake
 
-This is where I am preparing nixos packages and modules for the Simplex Chat
+This is where I am preparing nixos packages and modules for the SimpleX Chat
 servers ([simplexmq](https://github.com/simplex-chat/simplexmq)), and also the
 client ([simplex-chat](https://github.com/simplex-chat/simplex-chat/)).
 
