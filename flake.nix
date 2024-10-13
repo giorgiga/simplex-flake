@@ -12,11 +12,11 @@
       callPackage = pkgs.callPackage;
     in {
       "x86_64-linux" = {
-        simplex-chat         = callPackage ./pkgs/by-name/si/simplex-chat/package.nix { };
-        simplex-ntf-server   = callPackage ./pkgs/by-name/si/simplex-ntf-server/package.nix { };
-        simplex-smp-server   = callPackage ./pkgs/by-name/si/simplex-smp-server/package.nix { };
-        simplex-xftp         = callPackage ./pkgs/by-name/si/simplex-xftp/package.nix { };
-        simplex-xftp-server  = callPackage ./pkgs/by-name/si/simplex-xftp-server/package.nix  { };
+        simplex-chat           = callPackage ./pkgs/by-name/si/simplex-chat/package.nix { };
+        simplexmq-ntf-server   = callPackage ./pkgs/by-name/si/simplexmq-ntf-server/package.nix { };
+        simplexmq-smp-server   = callPackage ./pkgs/by-name/si/simplexmq-smp-server/package.nix { };
+        simplexmq-xftp         = callPackage ./pkgs/by-name/si/simplexmq-xftp/package.nix { };
+        simplexmq-xftp-server  = callPackage ./pkgs/by-name/si/simplexmq-xftp-server/package.nix  { };
       };
     };
 

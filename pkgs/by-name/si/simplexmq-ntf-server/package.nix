@@ -4,7 +4,7 @@
 }:
 
 stdenv.mkDerivation rec {
-  pname = "simplex-ntf-server";
+  pname = "simplexmq-ntf-server";
   version = "6.0.6";
 
   dontUnpack = true;
@@ -25,10 +25,10 @@ stdenv.mkDerivation rec {
   buildInputs = [ gmp openssl zlib ];
 
   meta = {
-    homepage = "https://simplex.chat/";
+    homepage = "https://simplex.chat";
     downloadPage = "https://github.com/simplex-chat/simplexmq/releases/tag/v${version}";
     description = "Simplex Chat NTF server";
-    mainProgram = "simplex-ntf-server";
+    mainProgram = "ntf-server";
     license = lib.licenses.agpl3Only;
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
     platforms = [ "x86_64-linux" ];

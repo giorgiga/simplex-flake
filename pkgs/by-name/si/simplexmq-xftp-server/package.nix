@@ -4,19 +4,19 @@
 }:
 
 stdenv.mkDerivation rec {
-  pname = "simplex-xftp";
-  version = "6.0.6"; # see https://github.com/simplex-chat/simplexmq/issues/1368
+  pname = "simplexmq-xftp-server";
+  version = "6.0.6";
 
   dontUnpack = true;
 
   binary = fetchurl {
-    url = "https://github.com/simplex-chat/simplexmq/releases/download/v${version}/xftp-ubuntu-22_04-x86-64";
-    hash = "sha256-MPo+Zgrg05q0ZakrpkuU/dozAJtXQrEgsje/IOE5iX0=";
+    url = "https://github.com/simplex-chat/simplexmq/releases/download/v${version}/xftp-server-ubuntu-22_04-x86-64";
+    hash = "sha256-qyDKh9hhbzMo0+Nd3UbcGdR+eLE3+6lj7u7QLGIoE4c=";
   };
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D '${binary}' $out/bin/xftp
+    install -m755 -D '${binary}' $out/bin/xftp-server
     runHook postInstall
   '';
 
@@ -25,10 +25,10 @@ stdenv.mkDerivation rec {
   buildInputs = [ gmp openssl zlib ];
 
   meta = {
-    homepage = "https://simplex.chat/";
+    homepage = "https://simplex.chat";
     downloadPage = "https://github.com/simplex-chat/simplexmq/releases/tag/v${version}";
-    description = "Simplex Chat XFTP client";
-    mainProgram = "simplex-xftp";
+    description = "Simplex Chat XFTP server";
+    mainProgram = "xftp-server";
     license = lib.licenses.agpl3Only;
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
     platforms = [ "x86_64-linux" ];
