@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D '${binary}' $out/bin/simplex-ntf-server
+    install -m755 -D '${binary}' $out/bin/ntf-server
     runHook postInstall
   '';
 

@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D '${binary}' $out/bin/simplex-xftp
+    install -m755 -D '${binary}' $out/bin/xftp
     runHook postInstall
   '';
 

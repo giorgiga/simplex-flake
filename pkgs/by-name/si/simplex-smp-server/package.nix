@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D '${binary}' $out/bin/simplex-smp-server
+    install -m755 -D '${binary}' $out/bin/smp-server
     runHook postInstall
   '';
 
