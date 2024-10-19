@@ -10,12 +10,13 @@
     let
       pkgs = import inputs.nixpkgs { system = "x86_64-linux"; };
       callPackage = pkgs.callPackage;
+      revisions = { revisions = import ./pkgs/servers/simplexmq/revisions.nix; };
     in {
       "x86_64-linux" = {
-        # simplexmq-ntf-server   = callPackage ./pkgs/servers/simplexmq/ntf-server-package.nix { };
-        simplexmq-smp-server   = callPackage ./pkgs/servers/simplexmq/smp-server-package.nix { };
-        # simplexmq-xftp         = callPackage ./pkgs/servers/simplexmq/xftp-package.nix { };
-        # simplexmq-xftp-server  = callPackage ./pkgs/servers/simplexmq/xftp-server-package.nix  { };
+        simplexmq-smp-server = callPackage ./pkgs/servers/simplexmq/smp-server-package.nix revisions;
+
+        simplexmq-aeson            = callPackage ./pkgs/servers/simplexmq/aeson.nix revisions;
+        simplexmq-attoparsec-aeson = callPackage ./pkgs/servers/simplexmq/attoparsec-aeson.nix revisions;
       };
     };
 
