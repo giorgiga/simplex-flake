@@ -2,6 +2,7 @@
   lib,
   haskellPackages,
   fetchFromGitHub,
+  callPackage,
   revisions
 }:
 
